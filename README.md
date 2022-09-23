@@ -1,8 +1,8 @@
 # bankpersonalloan
-Analyzing Banking and with regards to Personal Loans
+Analyzing Banking with regards to Personal Loans
 
 #### Project Overview
-In the world of Banking, Loan Acceptance has always been an area of interest. How likely is it that an individual will accept a loan? What are the different factors that go into whether or not someone will accept a loan? I wanted to answer these questions and also explore banking data to see discover different breakdowns of education levels, family sizes, and other factors.
+In the world of Banking, Loan Acceptance has always been an area of interest. How likely is it that an individual will accept a loan? What are the different factors that go into whether or not someone will accept a loan? I wanted to answer these questions and also explore banking data to discover different breakdowns of education levels, family sizes, and other factors.
 
 #### Dataset Overview
 The dataset used had attributes of both numeric and boolean values. It consists of 5000 records of bank customers and their following attributes: ID (Customer ID), Age (Customer's Age), Experience (number of years of professional experience), Income (Annual Income of the customer), ZIP Code (Customer's ZIP Code), Family (Customer's family size), CCAvg (How much the customer spent with their credit cards on average per month), Education (value of 1 for undergrad, 2 for graduate, and 3 for advanced degree), Mortgage (The value of the customer's house mortgage), Securities Account (Does the customer have a Securities Account (1/0)), CD Account (Does the customer have a Certificate of Deposit (CD) Account (1/0)), Online (Does the customer use online banking facilities (1/0)), CreditCard (Does the customer use a credit card issued by the Bank (1/0)), and Personal Loan (Whether or not the customer accepted the loan offered (1/0)).
@@ -48,7 +48,7 @@ After looking at the heatmap, I discovered that both Age and Experience were ver
 ```python
 df3 = df3.drop(['Experience'],axis=1)
 ```
-The next step was to get a breakdown of the dataset from the perspective of education level. To do this I created a new column with takes the values of the Education attribute (1,2,3) and converts them to their category equivalents (Undergrad, Grad, Advanced).
+The next step was to get a breakdown of the dataset from the perspective of education level. To do this I created a new column which takes the values of the Education attribute (1,2,3) and converts them to their category equivalents (Undergrad, Grad, Advanced).
  
 ```python
 def edlevel(x):
@@ -72,7 +72,7 @@ plt.show()
 ```
 ![image](https://user-images.githubusercontent.com/114118047/191826403-8fb1eb79-022b-4deb-921a-ab46a3290a65.png)
 
-From the pie chart it is clear to see that customer holding only Bachelor's degree were the majority.
+From the pie chart it is clear to see that customers holding only Bachelor's degree were the majority.
 
 Next, I wanted to find out how many customers held which accounts. How many had Securities accounts or CD Accounts or both or none. To find this breakdown, I created a new column which used the boolean values of the Securities and CD Accounts attributes and presented them in words. The values of the new column were 'Holds Securities and Deposit', 'Holds only Securities', Holds only Deposit', 'Does not hold Securities or Deposit.'
 
@@ -155,7 +155,7 @@ What I found was that Income, Family Size, CC Avg, and Mortgage value all had an
 #### Conclusion
 To conclude, this dataset told a few different stories and dissolved a few hypotheses I had at the beginning. One of them being that Education Level had no real impact on the Personal Loan acceptance. What did have an impact were the customers' ages and some of their banking details including Income, Average credit card spending per month and which accounts they held. One thing that was surprising was to find that the overwhelming majority of the customers did not have a Securities or CD Account. It was no surprise however that Income played a role in Personal Loan acceptance.
 
-Though this analysis was not as in depth or unique as I would've liked it to be, I was still able to complete the objective, gain insights and answer the questions that I had set out at the beginning. Finance has always interested and as a Data enthusiast, I was glad to have the oppurtunity to explore this dataset. 
+At the end of this project, I was able to complete the objective, gain insights and answer the questions that I had set out at the beginning. Finance has always interested me and as a Data enthusiast, I was glad to have the oppurtunity to explore this dataset. 
     
    
 
