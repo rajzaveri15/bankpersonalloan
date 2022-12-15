@@ -16,7 +16,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_excel("C:/Users/rajza/Documents/Portfolio Projects/Personal_Loan_Banking/Bank_Personal_Loan_Modelling.xlsx",1)
+df = pd.read_excel("Bank_Personal_Loan_Modelling.xlsx",1)
 ```
 ```python
 df.isnull().sum()
